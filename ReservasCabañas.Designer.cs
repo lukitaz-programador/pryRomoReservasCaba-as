@@ -74,6 +74,7 @@
             // 
             // txtDias
             // 
+            txtDias.Enabled = false;
             txtDias.Location = new Point(413, 36);
             txtDias.Name = "txtDias";
             txtDias.Size = new Size(86, 23);
@@ -91,11 +92,13 @@
             // lstPersonas
             // 
             lstPersonas.DropDownStyle = ComboBoxStyle.DropDownList;
+            lstPersonas.Enabled = false;
             lstPersonas.FormattingEnabled = true;
             lstPersonas.Location = new Point(269, 36);
             lstPersonas.Name = "lstPersonas";
             lstPersonas.Size = new Size(71, 23);
             lstPersonas.TabIndex = 3;
+            lstPersonas.SelectedIndexChanged += lstPersonas_SelectedIndexChanged;
             // 
             // lblPersonass
             // 
@@ -110,10 +113,12 @@
             // 
             lstTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             lstTipo.FormattingEnabled = true;
+            lstTipo.Items.AddRange(new object[] { "Cabaña A", "Cabaña B" });
             lstTipo.Location = new Point(60, 36);
             lstTipo.Name = "lstTipo";
             lstTipo.Size = new Size(115, 23);
             lstTipo.TabIndex = 1;
+            lstTipo.SelectedIndexChanged += lstTipo_SelectedIndexChanged;
             // 
             // lblTipoo
             // 
@@ -183,10 +188,12 @@
             // 
             lstTarjetas.DropDownStyle = ComboBoxStyle.DropDownList;
             lstTarjetas.FormattingEnabled = true;
+            lstTarjetas.Items.AddRange(new object[] { "Card Red ", "Card Green", "Card Blue" });
             lstTarjetas.Location = new Point(127, 85);
             lstTarjetas.Name = "lstTarjetas";
             lstTarjetas.Size = new Size(208, 23);
             lstTarjetas.TabIndex = 3;
+            lstTarjetas.SelectedIndexChanged += lstTarjetas_SelectedIndexChanged;
             // 
             // lblTarjetaa
             // 
